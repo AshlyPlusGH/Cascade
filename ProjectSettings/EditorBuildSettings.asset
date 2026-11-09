@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/[2] Scenes/start.unity
+    guid: 63699a4ba2e00d740b1e3509aa5efcb6
+  - enabled: 1
+    path: Assets/[2] Scenes/menu.unity
+    guid: 302f77a8598e58943a7b1fb67626073f
+  - enabled: 1
+    path: Assets/[2] Scenes/lose.unity
+    guid: 71f5e94de16d59643a9ca83b7dcd6ac8
+  - enabled: 1
+    path: Assets/[2] Scenes/win.unity
+    guid: 709e52ad6748f3a438e1636dab626b55
+  - enabled: 1
+    path: Assets/[2] Scenes/Cascade/[Cascade] fleet.unity
+    guid: 0b7ed9a57e6f7c2458357aaba2647507
+  - enabled: 1
+    path: Assets/[2] Scenes/Cascade/[Cascade] lobby.unity
+    guid: f1b9c82897e754e43a105b3d44e90b89
+  - enabled: 1
+    path: Assets/[2] Scenes/Cascade/[Cascade] main.unity
+    guid: aa9cdf781b42e884da9fa1850d684989
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

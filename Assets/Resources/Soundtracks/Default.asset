@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac361fc3bbf68f248afb6d949dd0227b, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: AshesUnityInteractionPackage::Ash.Soundtrack
+  tracks:
+    list:
+    - Key: 1
+      Value: {fileID: 8300000, guid: b345e4320584c934b99ed38151de5ce9, type: 3}
+    - Key: 2
+      Value: {fileID: 8300000, guid: fefacdb149640c5478b8697312273ad6, type: 3}
+    - Key: 3
+      Value: {fileID: 8300000, guid: d1b6d85dc869d4148976c87d98d374be, type: 3}
+    keyCollision: 0

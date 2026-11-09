@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{d92839ee-7399-48ca-9616-dc3e19051d6a}">
+		<property name="assetPath">
+			<value>Thruster_Fires.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.2779818594104309</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{5ef5068c-f657-45d5-a42c-c5c640f2b43f}</destination>
+		</relationship>
+	</object>
+</objects>

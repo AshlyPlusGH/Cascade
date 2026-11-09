@@ -1,0 +1,17 @@
+{
+    "name": "Shadowhulk",
+    "rootNamespace": "Shadowhulk",
+    "references": [
+        "GUID:8ef1f66db7e48034ca00c88404e58ce2",
+        "GUID:885f6b5442205eb4eae6bf537f7b322a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

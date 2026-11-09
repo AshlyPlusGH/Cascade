@@ -1,0 +1,24 @@
+{
+    "name": "Cascade",
+    "rootNamespace": "Cascade",
+    "references": [
+        "GUID:8ef1f66db7e48034ca00c88404e58ce2",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:885f6b5442205eb4eae6bf537f7b322a",
+        "GUID:6e20f757a1bae164fa42750dd2b27dcb",
+        "GUID:629ad64ea20117f43b28b33033f75b88",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:80ecb87cae9c44d19824e70ea7229748",
+        "GUID:2218e9acf4363e04493a4aa50e7d278e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

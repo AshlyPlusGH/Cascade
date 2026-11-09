@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2630840f15c8eee409f61fcb5d802e28, type: 3}
+  m_Name: '[Ship] TEST'
+  m_EditorClassIdentifier: Assembly-CSharp::soDATA_Ship
+  data:
+    Name: Zahur
+    HP: 1
+    AP: 0
+    SP: 0
+    Moves: 3
+    Squad: 1
+    Weapons:
+    - {fileID: 11400000, guid: 99ac1b2895b37ab4987aeebf44e84ce0, type: 2}
+    - {fileID: 11400000, guid: 99ac1b2895b37ab4987aeebf44e84ce0, type: 2}
+    - {fileID: 11400000, guid: 99ac1b2895b37ab4987aeebf44e84ce0, type: 2}
+    LanceHull: {fileID: 11400000, guid: 5875d4570b4da704eb7995285e87cc75, type: 2}
+    LarboardHull: {fileID: 11400000, guid: 0b50ae1b20ed41c4fa26d2a9b8e9d84f, type: 2}
+    StarboardHull: {fileID: 11400000, guid: 0b50ae1b20ed41c4fa26d2a9b8e9d84f, type: 2}
+    FlankHull: {fileID: 11400000, guid: 7d11474591c22014790309070f4c1384, type: 2}
+    Ability: {fileID: 0}
+    SkinCode: 3

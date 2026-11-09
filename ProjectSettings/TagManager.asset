@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - No Collisions
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 3616212527
+    locked: 0
+  - name: Undermap
+    uniqueID: 4116950245
+    locked: 0
+  - name: Overmap
+    uniqueID: 1340215503
+    locked: 0
+  - name: Tile Highlights
+    uniqueID: 1129318769
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ships
+    uniqueID: 2348639147
+    locked: 0
+  - name: Cursor
+    uniqueID: 1713383055
+    locked: 0
+  - name: UI
+    uniqueID: 3870047241
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []

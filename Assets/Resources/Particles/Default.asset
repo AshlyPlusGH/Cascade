@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df13c9d78f6789d40a94ed6f5642418f, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: AshesUnityInteractionPackage::soDATA_ParticleLibrary
+  particleInstances:
+    list:
+    - Key: 1
+      Value: {fileID: 6368483249303427004, guid: 8e2458da0f0592f468ca89ef7068ef97, type: 3}
+    - Key: 2
+      Value: {fileID: 6368483249303427004, guid: 5300f5f414fcaa54391b033b047130c5, type: 3}
+    - Key: 3
+      Value: {fileID: 6368483249303427004, guid: f245d8b2db1c58443a87d6499b64730e, type: 3}
+    keyCollision: 0
