@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using PurrNet;
 using UnityEngine;
 
+//namespace Cascade{
 public class Player : NetworkBehaviour
 {
     [SerializeField] private bool debug;
@@ -290,3 +291,4 @@ public class Player : NetworkBehaviour
         }
     #endregion
 }
+//}

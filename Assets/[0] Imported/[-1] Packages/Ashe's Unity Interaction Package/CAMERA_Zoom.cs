@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using Unity.Cinemachine;
 
 namespace Ash {
     public class CAMERA_Zoom : MonoBehaviour
@@ -10,6 +11,7 @@ namespace Ash {
         [Space(10)]
         
         [SerializeField] private Camera target;
+        [SerializeField] private CinemachineCamera targetCinemachine;
 
         [SerializeField] private int zoomMax = 10;
         [SerializeField] private int zoomMin = 1;
@@ -29,9 +31,16 @@ namespace Ash {
         void Awake(){ Setup(); }
         void Setup()
         {
-                if (target == null){ this.enabled = false; return; }
-            if (target.orthographicSize < zoomMin){ target.orthographicSize = zoomMin; }
-            if (target.orthographicSize > zoomMax){ target.orthographicSize = zoomMax; }
+                if ((target == null) && (targetCinemachine == null)){ this.enabled = false; return; }
+            if (target != null){
+                if (target.orthographicSize < zoomMin){ target.orthographicSize = zoomMin; }
+                if (target.orthographicSize > zoomMax){ target.orthographicSize = zoomMax; }
+            }
+            else if (targetCinemachine != null){
+                cameraType = ENUM_CAMERA_Type.Cinemachine;
+                if (targetCinemachine.Lens.OrthographicSize < zoomMin){ targetCinemachine.Lens.OrthographicSize = zoomMin; }
+                if (targetCinemachine.Lens.OrthographicSize > zoomMax){ targetCinemachine.Lens.OrthographicSize = zoomMax; }
+            }
         }
 
         void Update(){ Scroll(); }
@@ -45,6 +54,9 @@ namespace Ash {
             {
                 case ENUM_CAMERA_Type.Standard:
                     StandardScroll(scroll);
+                    break;
+                case ENUM_CAMERA_Type.Cinemachine:
+                    CinemachineScroll(scroll);
                     break;
             }
 
@@ -67,10 +79,28 @@ namespace Ash {
                     }
                 }
             }
+            void CinemachineScroll(float scroll)
+            {
+                if (scroll < 0f)
+                {
+                    // Scroll up
+                    if (targetCinemachine.Lens.OrthographicSize + zoomSpeed >= zoomMax){ targetCinemachine.Lens.OrthographicSize = zoomMax; }
+                    targetCinemachine.Lens.OrthographicSize += zoomSpeed;
+                }
+                else if (scroll > 0f)
+                {
+                    // Scroll down
+                    if (targetCinemachine.Lens.OrthographicSize - zoomSpeed <= zoomMin){ targetCinemachine.Lens.OrthographicSize = zoomMin; }
+                    if (targetCinemachine.Lens.OrthographicSize - zoomSpeed > 1){
+                        targetCinemachine.Lens.OrthographicSize -= zoomSpeed;
+                    }
+                }
+            }
     }
 
     enum ENUM_CAMERA_Type
     {
-        Standard
+        Standard,
+        Cinemachine
     }
 }

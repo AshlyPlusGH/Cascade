@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7846361012103503872}
   - component: {fileID: 4560179747380177475}
   m_Layer: 0
-  m_Name: '[Enable2DLighting]'
+  m_Name: '[AlwaysEnabled2DLighting]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

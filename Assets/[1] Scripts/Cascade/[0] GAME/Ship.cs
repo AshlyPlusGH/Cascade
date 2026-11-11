@@ -4,9 +4,9 @@ using PurrNet;
 using UnityEngine;
 using System.Linq;
 using System;
-using PurrNet.Utils;
 using Ash;
 
+//namespace Cascade{
 public class Ship : NetworkBehaviour
 {
     [SerializeField] private bool debug;
@@ -537,3 +537,4 @@ public class Ship : NetworkBehaviour
         }
     #endregion
 }
+//}
