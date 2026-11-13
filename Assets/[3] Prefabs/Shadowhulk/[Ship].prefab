@@ -178,6 +178,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3724483841769850957}
+  - component: {fileID: 5887786271300173695}
+  - component: {fileID: 8631411889042633102}
+  - component: {fileID: 2629303260056367067}
+  - component: {fileID: 4061406794497523980}
   m_Layer: 0
   m_Name: '[Ship]'
   m_TagString: Untagged
@@ -203,9 +207,119 @@ Transform:
   - {fileID: 433459343594417629}
   - {fileID: 918247477172618532}
   - {fileID: 3238107666229632411}
+  - {fileID: 1361220022916461045}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4036104332187944425
+--- !u!114 &5887786271300173695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190613061893913024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72b2ef1fb93ace64e838d373b8bed4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shadowhulk::OwnedObject
+  _networkRules: {fileID: 0}
+  _visitiblityRules: {fileID: 0}
+  _isSetup: 0
+  _prefabId: -2147483648
+  _componentIndex: -2147483648
+  _shouldBePooled: 0
+  _parent: {fileID: 0}
+  _invertedPathToNearestParent: 
+  _directChildren: []
+--- !u!114 &8631411889042633102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190613061893913024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef5d87cca6714e4c87d64df461d09f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shadowhulk::Shadowhulk.Ship
+  debug: 0
+  DEBUG_spawnAsEnemy: 0
+  ownedObject: {fileID: 5887786271300173695}
+  sensors:
+  - {fileID: 1343141642590133614}
+  - {fileID: 3884213779061269434}
+  weapons: []
+  currentNode: -1
+  hullPoints: 1
+  armorPoints: 0
+  shieldPoints: 0
+  targetPosition: {x: 0, y: 0}
+  movementQueue: []
+--- !u!58 &2629303260056367067
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190613061893913024}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.1
+--- !u!50 &4061406794497523980
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2190613061893913024}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!1 &3421020148128054194
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,122 +327,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 918247477172618532}
+  - component: {fileID: 5613964943662455803}
+  - component: {fileID: 3041648453091749209}
+  - component: {fileID: 2943992104624302714}
   m_Layer: 0
-  m_Name: '[Ship] Auto Weapons'
+  m_Name: '[FiringArc]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &918247477172618532
+--- !u!4 &5613964943662455803
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4036104332187944425}
+  m_GameObject: {fileID: 3421020148128054194}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3724483841769850957}
+  m_Father: {fileID: 4547031181233765771}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6561037759991174765
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4137671637465031487}
-  - component: {fileID: 2637642081228546623}
-  - component: {fileID: 7386374873439599908}
-  - component: {fileID: 9196100630921226011}
-  m_Layer: 0
-  m_Name: '[Sensor] Range'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4137671637465031487
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6561037759991174765}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4804470604298089232}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2637642081228546623
+--- !u!114 &3041648453091749209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6561037759991174765}
+  m_GameObject: {fileID: 3421020148128054194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 040746a61e5402146a38aa5b7169bb47, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
-  m_ComponentVersion: 2
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.25
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
-  m_LightVolumeIntensity: 1
-  m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 2f068bd7e5ac63f5cf10e24f7109504300000000ab63fd8b8f262066093cace6
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 1
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowsEnabled: 0
-  m_ShadowIntensity: 0.75
-  m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 0
-  m_PointLightOuterAngle: 45
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 25
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
---- !u!60 &7386374873439599908
-PolygonCollider2D:
+  m_EditorClassIdentifier: '::'
+  debug: 0
+  area: {fileID: 2943992104624302714}
+  entitiesInArea: []
+--- !u!61 &2943992104624302714
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6561037759991174765}
+  m_GameObject: {fileID: 3421020148128054194}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -366,25 +411,176 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0}
-      - {x: 9, y: 23}
-      - {x: 0, y: 25}
-      - {x: -9, y: 23}
-  m_UseDelaunayMesh: 1
---- !u!114 &9196100630921226011
+  m_Size: {x: 0.2, y: 1}
+  m_EdgeRadius: 2.95
+--- !u!1 &3946589858304187859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4547031181233765771}
+  - component: {fileID: 4188244313360629590}
+  m_Layer: 0
+  m_Name: '[Weapon] DEBUG Auto Weapon'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4547031181233765771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3946589858304187859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5613964943662455803}
+  m_Father: {fileID: 918247477172618532}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4188244313360629590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6561037759991174765}
+  m_GameObject: {fileID: 3946589858304187859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a82f99c40d3b3d4cad83c39ff9f174a, type: 3}
+  m_Script: {fileID: 11500000, guid: b6de3758afa285240b86d850de2c43f9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: AshesUnityInteractionPackage::RotationCanceller
+  m_EditorClassIdentifier: Shadowhulk::Shadowhulk.Weapon
+  debug: 0
+  DEBUG_closestTarget: {fileID: 0}
+  DEBUG_readyToFire: 0
+  controllingEntity: {fileID: 8631411889042633102}
+  arcs:
+  - {fileID: 3041648453091749209}
+  targets: []
+  cooldown: 1
+  cooldownTimer: 0
+--- !u!1 &4036104332187944425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918247477172618532}
+  m_Layer: 0
+  m_Name: '[Ship] Auto Weapons'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &918247477172618532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4036104332187944425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4547031181233765771}
+  m_Father: {fileID: 3724483841769850957}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4126328242534041276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1361220022916461045}
+  - component: {fileID: 3728827050198636063}
+  - component: {fileID: 1806209745580749567}
+  m_Layer: 0
+  m_Name: '[Ship] Selecter Collider'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1361220022916461045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126328242534041276}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3724483841769850957}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3728827050198636063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126328242534041276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1312ee3250aad8b4ea5ff6117495501e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shadowhulk::TAG_ENTITY_Selectable
+  entity: {fileID: 8631411889042633102}
+--- !u!58 &1806209745580749567
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4126328242534041276}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &7765029283239426431
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +646,79 @@ Transform:
   - {fileID: 4137671637465031487}
   m_Father: {fileID: 3724483841769850957}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4450407123568019900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4804470604298089232}
+    m_Modifications:
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407991098545610705, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+      propertyPath: m_Name
+      value: '[Sensor] Range'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+--- !u!114 &3884213779061269434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8636643592410224122, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+  m_PrefabInstance: {fileID: 4450407123568019900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957057aa103df814c8b08bea3c89ce03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shadowhulk::Sensor
+--- !u!4 &4137671637465031487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 335786305141877379, guid: 73a214307c3670143985a27c4bb7c0b2, type: 3}
+  m_PrefabInstance: {fileID: 4450407123568019900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8327211830839256876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +767,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3021504741104227074, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021504741104227074, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3021504741104227074, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7204898106839992952, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
       propertyPath: m_Name
       value: '[Sensor] Aura'
@@ -507,6 +788,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
+--- !u!114 &1343141642590133614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -2219149544191149502, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}
+  m_PrefabInstance: {fileID: 8327211830839256876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957057aa103df814c8b08bea3c89ce03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shadowhulk::Sensor
 --- !u!4 &6953999674915789164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1374058402087648832, guid: ba7456cd9019bc245ab5ca72d6ef43f2, type: 3}

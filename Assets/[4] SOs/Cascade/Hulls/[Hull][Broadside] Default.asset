@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1277c2baec0246246beec7693ac164be, type: 3}
-  m_Name: '[Hull][Flank] Default'
-  m_EditorClassIdentifier: Assembly-CSharp::soDATA_HULL_Flank
-  icon: {fileID: 21300000, guid: 005888ede18a58e4db8d069cfa3007cb, type: 3}
-  info: Default Flank Hull
+  m_Script: {fileID: 11500000, guid: 262515781bd3a264aa06a55c5d93a598, type: 3}
+  m_Name: '[Hull][Broadside] Default'
+  m_EditorClassIdentifier: Assembly-CSharp::soDATA_HULL_Broadside
+  icon: {fileID: 21300000, guid: d459a5cc9ea9d764499625bc8f78fd7b, type: 3}
+  info: Default Broadside Hull
   hp: 1
   ap: 0
   sp: 0
+  speed: 0
   cost: 1

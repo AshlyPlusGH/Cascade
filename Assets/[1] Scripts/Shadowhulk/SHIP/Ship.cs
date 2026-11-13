@@ -3,42 +3,24 @@ using UnityEngine;
 
 namespace Shadowhulk
 {
-    public class Ship : MonoBehaviour
+    public class Ship : Entity
     {
-        [SerializeField] private bool debug;
-            private void Log(string contents){ if (debug){ Debug.Log(contents + " at: " + name); }}
-
-        [Space(10)]
-
-        [SerializeField] private int currentNode;
-        public int STAT_currentNode => currentNode;
-
-        [SerializeField] private int hullPoints;
-        public int STAT_hullPoints => hullPoints;
-        [SerializeField] private int armorPoints;
-        public int STAT_armorPoints => armorPoints;
-        [SerializeField] private int shieldPoints;
-        public int STAT_shieldPoints => shieldPoints;
-
         private SHIP_Thruster[] thrusters;
 
-        void Awake(){ Setup(); }
-        public void Setup(){  }
+        private float speed = 1;
 
         #region Functions
 
-            void Move(){}
-            void Teleport(){}
-            void Rotate(){}
-            void RotateSensors(){}
-            void Damage(){}
-            void Die(){}
+            public override void Move()
+            {
+                transform.position = Vector3.Lerp(transform.position,targetPosition,Time.deltaTime*speed);
+            }
 
         #endregion
 
         #region Queries
 
-            //public ENUM_BiomeType GetOccupyingBiomeType(transform.position, STAT_currentNode){ return Map.GetBiomeTypeAtPosition(); }
+            
 
         #endregion
     }

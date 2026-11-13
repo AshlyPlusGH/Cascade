@@ -2304,7 +2304,7 @@ Transform:
   m_GameObject: {fileID: 380468129}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0489821, y: -1.2249315, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2675,7 +2675,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &443402503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4017,7 +4017,7 @@ GameObject:
   - component: {fileID: 758375207}
   - component: {fileID: 758375210}
   - component: {fileID: 758375209}
-  - component: {fileID: 758375208}
+  - component: {fileID: 758375211}
   m_Layer: 0
   m_Name: '[Tilemap] Generated Map'
   m_TagString: Untagged
@@ -4040,18 +4040,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 993622466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &758375208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758375206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6c1b5456647ff458cfb4b550ce6d94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TAG_Tilemap
 --- !u!483693784 &758375209
 TilemapRenderer:
   serializedVersion: 2
@@ -4189,6 +4177,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &758375211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758375206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08aad8eb614dd9408481bfe7e2e9d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cascade::TAG_Tilemap
 --- !u!1 &769614052
 GameObject:
   m_ObjectHideFlags: 0
@@ -6231,9 +6231,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 796046553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b4382fdc92b874585e967c0cc0fbe8, type: 3}
+  m_Script: {fileID: 11500000, guid: 14316c3687286c843aacc36ed42a8b2f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Cascade::TAG_TilemapBorders
 --- !u!1 &819565544
 GameObject:
   m_ObjectHideFlags: 0
@@ -7222,7 +7222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1067323427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7341,7 +7341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1179600918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8722,8 +8722,8 @@ GameObject:
   - component: {fileID: 1448248421}
   - component: {fileID: 1448248424}
   - component: {fileID: 1448248423}
-  - component: {fileID: 1448248425}
   - component: {fileID: 1448248426}
+  - component: {fileID: 1448248427}
   m_Layer: 0
   m_Name: '[Tilemap] Deployment Grid Player 2'
   m_TagString: Untagged
@@ -9257,19 +9257,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1448248425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448248420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7fdb4bac9d6b84498f961596d3d31ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TAG_TilemapDeploymentZone
-  code: 2
 --- !u!114 &1448248426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9282,6 +9269,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141f530b2c1768549a344860bcd305bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AshesUnityInteractionPackage::GameObjectOperations
+--- !u!114 &1448248427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448248420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622966b12d4132f4badf2a95bd56c7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cascade::TAG_TilemapDeploymentZone
+  code: 2
 --- !u!1 &1449955844
 GameObject:
   m_ObjectHideFlags: 0
@@ -15741,8 +15741,8 @@ GameObject:
   - component: {fileID: 1899854620}
   - component: {fileID: 1899854623}
   - component: {fileID: 1899854622}
-  - component: {fileID: 1899854624}
   - component: {fileID: 1899854625}
+  - component: {fileID: 1899854626}
   m_Layer: 0
   m_Name: '[Tilemap] Deployment Grid Player 1'
   m_TagString: Untagged
@@ -16276,19 +16276,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1899854624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899854619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7fdb4bac9d6b84498f961596d3d31ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TAG_TilemapDeploymentZone
-  code: 1
 --- !u!114 &1899854625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16301,6 +16288,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141f530b2c1768549a344860bcd305bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AshesUnityInteractionPackage::GameObjectOperations
+--- !u!114 &1899854626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899854619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622966b12d4132f4badf2a95bd56c7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Cascade::TAG_TilemapDeploymentZone
+  code: 1
 --- !u!1 &1913014293
 GameObject:
   m_ObjectHideFlags: 0

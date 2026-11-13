@@ -26,5 +26,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/[2] Scenes/Cascade/[Cascade] main.unity
     guid: aa9cdf781b42e884da9fa1850d684989
+  - enabled: 1
+    path: Assets/[2] Scenes/Shadowhulk/[Shadowhulk] main.unity
+    guid: 1a9eca208da89aa4faf9862bb5253310
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -8,22 +8,30 @@ using PurrLobby;
 public class PURRNET_AshConnectionStarter : MonoBehaviour
 {
     private NetworkManager _networkManager;
+    [SerializeField] private GenericTransport _localTransportLayer;
     private LobbyDataHolder _lobbyDataHolder;
     
     private bool _useUnityRelay = false;
     
     private void Awake()
     {
+        if (_localTransportLayer == null) _localTransportLayer = GetComponent<UDPTransport>();
+
         if(!TryGetComponent(out _networkManager)) {
             PurrLogger.LogError($"Failed to get {nameof(NetworkManager)} component.", this);
             return;
         }
         
         _lobbyDataHolder = FindAnyObjectByType<LobbyDataHolder>();
-        if(!_lobbyDataHolder) {
-            //PurrLogger.LogError($"Failed to get {nameof(LobbyDataHolder)} component.", this);
-            return;
-        }
+        #if UNITY_EDITOR
+            _networkManager.transport = _localTransportLayer;
+            if (!_lobbyDataHolder) {
+                // local test: host in main editor, client in the ParrelSync clone
+                if (!ParrelSync.ClonesManager.IsClone()) _networkManager.StartServer();
+                _networkManager.StartClient();
+                return;
+            }
+        #endif
         
 #if UTP_LOBBYRELAY
         // Check if we're using UTP with relay - requires async configuration

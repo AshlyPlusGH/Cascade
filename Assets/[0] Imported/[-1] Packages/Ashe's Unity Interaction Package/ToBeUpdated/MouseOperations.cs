@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class MouseOperations
 {
+    public static Vector3 mousePositionWorld => GetMousePositionWorld();
+
     public static GameObject[] GetGameObjectsWithTriggerCollidersUnderMouse<T>(bool requireComponent = true)
         where T : Component
     {
             if (!IsValid(Input.mousePosition)) return null;
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-        Collider2D[] hits = Physics2D.OverlapPointAll(worldPos);
+        Collider2D[] hits = Physics2D.OverlapPointAll(mousePositionWorld);
         List<GameObject> results = new List<GameObject>();
 
         foreach (var c in hits)
@@ -27,8 +27,7 @@ public class MouseOperations
     public static GameObject[] GetGameObjectsWithTriggerCollidersUnderMouse()
     {
             if (!IsValid(Input.mousePosition)) return null;
-        Vector2 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Collider2D[] hits = Physics2D.OverlapPointAll(worldPos);
+        Collider2D[] hits = Physics2D.OverlapPointAll(mousePositionWorld);
 
         var results = new List<GameObject>();
         foreach (var c in hits)
@@ -38,6 +37,14 @@ public class MouseOperations
         }
 
         return results.ToArray();
+    }
+
+    public static Vector3 GetMousePositionWorld()
+    {
+            Camera camera = Camera.main;
+            if (camera == null) camera = Object.FindAnyObjectByType<Camera>();
+                if (camera == null){ Debug.Log("No Camera found in Scene"); return Vector3.zero; }
+        return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     public static bool IsMousePositionValid(){ return IsValid(Input.mousePosition); }

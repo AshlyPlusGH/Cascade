@@ -2,6 +2,7 @@ using NaughtyAttributes;
 using UnityEngine;
 using PurrNet;
 
+/*
 public class GAMEMANAGER_DEBUG : MonoBehaviour
 {
     #region Vars
@@ -25,3 +26,4 @@ public class GAMEMANAGER_DEBUG : MonoBehaviour
         }
     #endregion
 }
+*/

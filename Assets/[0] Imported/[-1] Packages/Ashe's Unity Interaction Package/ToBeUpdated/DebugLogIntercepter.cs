@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-[InitializeOnLoad]
+//[InitializeOnLoad]
 public static class DebugLogIntercepter
 {
     /*
